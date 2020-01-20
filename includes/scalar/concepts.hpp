@@ -17,4 +17,10 @@ namespace numerics
 
     template <typename T>
     concept FloatingPoint = std::is_floating_point_v<T>;
+
+    template <typename T>
+    concept SignedIntegral = Integral<T> && Signed<T>;
+
+    template <typename T>
+    concept UnsignedIntegral = Integral<T> && Unsigned<T>;
 }
